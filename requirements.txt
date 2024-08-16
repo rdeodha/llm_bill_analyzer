@@ -3,3 +3,4 @@ langchain-community
 ollama
 faiss-cpu
 python-dotenv
+pypdf

@@ -7,14 +7,22 @@ def main():
     # Load the Ollama model
     model = get_ollama_model()
 
+    print("Model loaded successfully.")
+
     # Load documents from the context folder
     documents = load_documents()
+
+    print("Documents loaded successfully.")
 
     # Set up RAG
     qa_chain = setup_rag(model, documents)
 
+    print("RAG setup successfully.")
+
     # Get the chat prompts
     rag_prompt, no_rag_prompt = get_chat_prompt()
+
+    print("Prompts loaded successfully.")
 
     print("Welcome to the AI assistant. Type 'exit' to end the conversation.")
     
@@ -35,7 +43,7 @@ def main():
             print("AI:", result['result'])
         else:
             # If RAG is not available, use the model directly
-            result = model(full_prompt)
+            result = model.invoke(full_prompt)
             print("AI:", result)
 
 if __name__ == "__main__":

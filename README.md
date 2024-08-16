@@ -89,7 +89,6 @@ llm_bill_analyzer/
 - Update `src/model.py` to use a different Ollama model.
 - Adjust chunk size and overlap in `src/document_loader.py` for different document processing behavior.
 
-
 ### Acknowledgments
 
 - [LangChain](https://github.com/hwchase17/langchain) for the awesome framework
